@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hall/hall",
+    "pages/personal/center"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "fontSize": "22px",
+    "iconWidth": "18px",
+    "height": "50px",
+    "spacing": "6px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/navagit-icon/index.png",
+        "selectedIconPath": "static/image/navagit-icon/index-acitve.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/hall/hall",
+        "iconPath": "static/image/navagit-icon/hall.png",
+        "selectedIconPath": "static/image/navagit-icon/hall-active.png",
+        "text": "交易大厅"
+      },
+      {
+        "pagePath": "pages/personal/center",
+        "iconPath": "static/image/navagit-icon/mine.png",
+        "selectedIconPath": "static/image/navagit-icon/mine-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
