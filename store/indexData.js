@@ -76,7 +76,7 @@ export default {
 			if ( res.statusCode == 200){
 				let arr = new Array();
 				console.log('正常获取')
-				res.data.list.forEach(item => {
+				res.data.list.forEach(item => {		//实际使用按data类型写
 					arr.push({
 						image: item.image
 					})

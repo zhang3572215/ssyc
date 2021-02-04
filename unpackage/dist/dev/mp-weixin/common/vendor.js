@@ -9180,7 +9180,7 @@ var _default = {
         if (res.statusCode == 200) {
           var arr = new Array();
           console.log('正常获取');
-          res.data.list.forEach(function (item) {
+          res.data.list.forEach(function (item) {//实际使用按data类型写
             arr.push({
               image: item.image });
 
