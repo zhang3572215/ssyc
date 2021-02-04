@@ -25,15 +25,31 @@ function postRequest(option){
 			url: baseUrl+option.url,
 			data: option.data,      
 			header: {
-			    "Content-Type": 'application/x-www-form-urlencoded;charset=UTF-8'
+			    "Content-Type": 'application/json'
 			},
-		}).then(data => {
-			let [error, res] = data
-			if (res){
+			success: res => {
 				resolve(res)
+			},
+			fail: err => {
+				reject(err)
 			}
-			if (error){
-				reject(error)
+		})
+	})
+}
+function getRequest(option){
+	return new Promise((resolve, reject) => { 
+		uni.request({
+			method: 'GET',
+			url: baseUrl+option.url,
+			data: option.data,      
+			header: {
+			    "Content-Type": 'application/json'
+			},
+			success: res => {
+				resolve(res)
+			},
+			fail: err => {
+				reject(err)
 			}
 		})
 	})
