@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -1727,137 +1727,7 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-
-/***/ 10:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 2:
+/* 2 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -7903,8 +7773,7 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-
-/***/ 3:
+/* 3 */
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -7934,8 +7803,150 @@ module.exports = g;
 
 
 /***/ }),
+/* 4 */
+/*!***********************************!*\
+  !*** D:/work/APP/ssyc/pages.json ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-/***/ 33:
+
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 11 */
 /*!***************************************!*\
   !*** D:/work/APP/ssyc/store/index.js ***!
   \***************************************/
@@ -7944,15 +7955,16 @@ module.exports = g;
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 34));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 12));
 
-// import { getRecorderBy } from '@/utils/ApiList'			//一般情况下请求的页面初始化数据放到
+
+var _indexData = _interopRequireDefault(__webpack_require__(/*! ./indexData.js */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // import { getRecorderBy } from '@/utils/ApiList'			//一般情况下请求的页面初始化数据放到
 
 _vue.default.use(_vuex.default); //vue的插件机制
 
 //Vuex.Store 构造器选项
 var store = new _vuex.default.Store({
-  state: {//存放状态
+  state: {//存放状态,这里相当于跟状态树
   },
 
   //计算属性
@@ -7962,14 +7974,15 @@ var store = new _vuex.default.Store({
   //action 提交的是 mutation，通过 mutation 来改变 state (该方法是异步的)
   actions: {},
   //模块	
-  modules: {} });var _default =
+  modules: {
+    indexData: _indexData.default } });var _default =
+
 
 
 store;exports.default = _default;
 
 /***/ }),
-
-/***/ 34:
+/* 12 */
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
   \********************************************/
@@ -9081,17 +9094,212 @@ var index = {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-
-/***/ 4:
-/*!***********************************!*\
-  !*** D:/work/APP/ssyc/pages.json ***!
-  \***********************************/
+/* 13 */
+/*!*******************************************!*\
+  !*** D:/work/APP/ssyc/store/indexData.js ***!
+  \*******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _APIList = __webpack_require__(/*! @/utils/API/APIList.js */ 14); //APIlist 按需载入方法
+var _default = {
+  namespaced: true,
+  state: {
+    interval: 3000,
+    duration: 500,
+    swiperData: [{
+      id: 0,
+      image: '../../static/image/top-img-june5.jpg',
+      url: '' },
+    {
+      id: 1,
+      image: '../../static/image/top-img-june5.jpg',
+      url: '' },
+    {
+      id: 2,
+      image: '../../static/image/top-img-june5.jpg',
+      url: '' }],
+
+    menuList: [{
+      id: 0,
+      icon: '../../static/image/menu-icon.png',
+      text: '质检服务',
+      url: '' },
+    {
+      id: 1,
+      icon: '../../static/image/menu-icon.png',
+      text: '交易模式	',
+      url: '' },
+    {
+      id: 2,
+      icon: '../../static/image/menu-icon.png',
+      text: '入驻指引',
+      url: '' }],
+
+    itemInfo: {
+      itemName: '优质供应商',
+      itemUrl: '',
+      itemList: [{
+        id: 0,
+        name: '福茂源',
+        pic: '../../static/image/menu-icon.png' },
+      {
+        id: 1,
+        name: '福茂源1',
+        pic: '../../static/image/menu-icon.png' },
+      {
+        id: 2,
+        name: '福茂源2',
+        pic: '../../static/image/menu-icon.png' },
+      {
+        id: 3,
+        name: '福茂源3',
+        pic: '../../static/image/menu-icon.png' }] } },
 
 
+
+  mutations: {
+    syncBannerInfo: function syncBannerInfo(state, list) {
+      if (list.length > 0) {
+        state.swiperData = [];
+        list.forEach(function (item, index) {
+          var obj = {};
+          state.swiperData.push({
+            id: index,
+            image: item.image });
+
+        });
+      }
+    } },
+
+  actions: {
+    asyncBannerInfo: function asyncBannerInfo(_ref) {var commit = _ref.commit,state = _ref.state;
+      console.log('测试获取data');
+      (0, _APIList.getBannerInfo)().then(function (res) {
+        if (res.statusCode == 200) {
+          var arr = new Array();
+          console.log('正常获取');
+          res.data.list.forEach(function (item) {
+            arr.push({
+              image: item.image });
+
+          });
+          commit('syncBannerInfo', arr);
+        }
+      }).catch(function (err) {
+        console.log(err);
+      });
+    } } };exports.default = _default;
+
+/***/ }),
+/* 14 */
+/*!*********************************************!*\
+  !*** D:/work/APP/ssyc/utils/API/APIList.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getBannerInfo = getBannerInfo;var _request = _interopRequireDefault(__webpack_require__(/*! ./request */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+/**
+                                                                                                                                                                                                                                                                            * API 列表
+                                                                                                                                                                                                                                                                            * XXXX为例子
+                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                           //	API名称
+                                                                                                                                                                                                                                                                           export function getOpenIdBy(data) {
+                                                                                                                                                                                                                                                                             return apiRequest({url:'XXXX',method:'get',data:data})
+                                                                                                                                                                                                                                                                           }
+                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                            **/
+
+//	获取首页banner信息
+function getBannerInfo() {
+  return (0, _request.default)({ url: 'XXXX', method: 'get' });
+}
+
+/***/ }),
+/* 15 */
+/*!*********************************************!*\
+  !*** D:/work/APP/ssyc/utils/API/request.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = apiRequest;var _url = _interopRequireDefault(__webpack_require__(/*! ./url.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+function apiRequest(param) {
+  var option = {
+    method: 'get',
+    header: {
+      "content-type": 'application/json' } };
+
+
+  Object.assign(option, param);
+  switch (option.method) {
+    case 'post':
+      return postRequest(option);
+      break;
+    case 'get':
+      return getRequest(option);
+      break;
+    default:return postFile(option.url, option.data);}
+
+}
+function postRequest(option) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      method: 'POST',
+      url: _url.default + option.url,
+      data: option.data,
+      header: {
+        "Content-Type": 'application/json' },
+
+      success: function success(res) {
+        resolve(res);
+      },
+      fail: function fail(err) {
+        reject(err);
+      } });
+
+  });
+}
+function getRequest(option) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      method: 'GET',
+      url: _url.default + option.url,
+      data: option.data,
+      header: {
+        "Content-Type": 'application/json' },
+
+      success: function success(res) {
+        resolve(res);
+      },
+      fail: function fail(err) {
+        reject(err);
+      } });
+
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 16 */
+/*!*****************************************!*\
+  !*** D:/work/APP/ssyc/utils/API/url.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var baseUrl = "";
+if (false) {} else {
+  // 开发环境
+  baseUrl = '';
+}var _default =
+baseUrl;exports.default = _default;
 
 /***/ })
-
-}]);
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

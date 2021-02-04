@@ -7,5 +7,10 @@ import apiRequest from './request'
 export function getOpenIdBy(data) {
   return apiRequest({url:'XXXX',method:'get',data:data})
 }
- * 注意此方法一般不直接用在页面上，
+
  **/
+
+//	获取首页banner信息
+export function getBannerInfo() {
+  return apiRequest({url:'XXXX',method:'get'})
+}

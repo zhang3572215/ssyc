@@ -5,8 +5,8 @@
 				<input type="text" v-model="searchData" class="index-search-input" placeholder="输入关键词" confirm-type="search">
 				<view v-bind:class="['btn index-search-btn', searchData!=''?'btn-primary':'']" @click="toSearchResult">搜索</view>
 			</view>
-			<swiper class="swiper" circular :indicator-dots="widthFix" :autoplay="false" :interval="interval" previous-margin="60rpx" next-margin="60rpx">
-				<swiper-item v-for="(item,index) in swiperData" :key="item.id">
+			<swiper class="swiper" circular :indicator-dots="indexData.widthFix" :autoplay="true" :interval="indexData.interval" previous-margin="60rpx" next-margin="60rpx">
+				<swiper-item v-for="(item,index) in indexData.swiperData" :key="item.id">
 					<view class="swiper-item swiper-bg">
 						<view class="swiper-image">
 							<image :src="item.image" mode="aspectFill"></image>							
@@ -16,7 +16,7 @@
 			</swiper>
 		</view>
 		<view class="index-menubar">
-			<view class="menu-item" v-for="item in menuList" :key="item.id">
+			<view class="menu-item" v-for="item in indexData.menuList" :key="item.id">
 				<view class="menu-icon">
 					<image :src="item.icon" mode="aspectFill"></image>
 				</view>
@@ -40,71 +40,29 @@
 </template>
 
 <script>
+	import { mapState, mapActions } from 'vuex'
+	const app = getApp()
 	export default {
 		data() {
 			return {
-				background: ['color1', 'color2', 'color3'],
-				autoplay: true,
-				interval: 2000,
-				duration: 500,
 				searchData: '',
-				swiperData:[{
-					id: 0,
-					image: '../../static/image/top-img-june5.jpg',
-					url: ''
-				},{
-					id: 1,
-					image: '../../static/image/top-img-june5.jpg',
-					url: ''
-				},{
-					id: 2,
-					image: '../../static/image/top-img-june5.jpg',
-					url: ''
-				}],
-				// menuIcon: '../../static/image/menu-icon.png',
-				menuList:[{
-					id: 0,
-					icon: '../../static/image/menu-icon.png',
-					text: '质检服务',
-					url: ''
-				},{
-					id: 1,
-					icon: '../../static/image/menu-icon.png',
-					text: '交易模式	',
-					url: ''
-				},{
-					id: 2,
-					icon: '../../static/image/menu-icon.png',
-					text: '入驻指引',
-					url: ''
-				}],
-				indexItemInfo:{
-					itemName: '优质供应商',
-					itemUrl: '',
-					itemList: [{
-						id: 0,
-						name: '福茂源',
-						pic: '../../static/image/menu-icon.png'	
-					},{
-						id: 1,
-						name: '福茂源1',
-						pic: '../../static/image/menu-icon.png'	
-					},{
-						id: 2,
-						name: '福茂源2',
-						pic: '../../static/image/menu-icon.png'	
-					},{
-						id: 3,
-						name: '福茂源3',
-						pic: '../../static/image/menu-icon.png'	
-					}]
-				}
 			}
+		},
+		computed: {
+			...mapState([
+				'indexData',
+			])
+		},
+		mounted() {
+			this.asyncBannerInfo()
 		},
 		methods: {
 			toSearchResult(){
 				
 			},
+			...mapActions('indexData',[
+				"asyncBannerInfo"
+			])
 		}
 	}
 </script>

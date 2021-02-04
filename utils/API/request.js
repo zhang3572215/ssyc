@@ -7,15 +7,14 @@ export default function apiRequest(param){
 	    }
 	}
 	Object.assign(option,param)
-		switch (option.method) {
-			case 'post':
-				return postRequest(option);
-				break;
-			case 'get':				
-				return getRequest (option);
-				break;
-			default: return postFile(option.url,option.data);
-		}
+	switch (option.method) {
+		case 'post':
+			return postRequest(option);
+			break;
+		case 'get':				
+			return getRequest (option);
+			break;
+		default: return postFile(option.url,option.data);
 	}
 }
 function postRequest(option){
