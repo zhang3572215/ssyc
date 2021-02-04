@@ -5,11 +5,12 @@
 				<input type="text" v-model="searchData" class="index-search-input" placeholder="输入关键词" confirm-type="search">
 				<view v-bind:class="['btn index-search-btn', searchData!=''?'btn-primary':'']" @click="toSearchResult">搜索</view>
 			</view>
-			<swiper class="swiper" circular :indicator-dots="indexData.widthFix" :autoplay="true" :interval="indexData.interval" previous-margin="60rpx" next-margin="60rpx">
+			<swiper class="swiper" circular :indicator-dots="indexData.widthFix" :autoplay="true" :interval="indexData.interval" next-margin="60rpx">
 				<swiper-item v-for="(item,index) in indexData.swiperData" :key="item.id">
 					<view class="swiper-item swiper-bg">
 						<view class="swiper-image">
-							<image :src="item.image" mode="aspectFill"></image>							
+							<!-- <image :src="item.image" mode="aspectFill"></image> -->
+							<img :src="item.image">
 						</view>
 					</view>
 				</swiper-item>
@@ -126,20 +127,24 @@
 		margin: 0 auto;
 		padding: 0;
 		text-align: center;
-		background-color: transparent;
 	}
 	.swiper-item {
 		height: 260rpx;
 		padding: 0 30rpx;
 	}
 	.swiper-image {
-		width: 100%;
-		height: 260rpx;		
+		width: 660rpx;
+		height: 260rpx;
 		border-radius: 40rpx;
 		overflow: hidden;
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.swiper-image image {
-		width: 100%;
+		max-width: 100%;
 	}
 	.uni-bg-red {
 		background-color: red;

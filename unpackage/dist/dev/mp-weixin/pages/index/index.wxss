@@ -70,20 +70,33 @@ swiper-item {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	background-color: transparent;
 }
 .swiper-item {
 	height: 260rpx;
 	padding: 0 30rpx;
 }
 .swiper-image {
-	width: 100%;
-	height: 260rpx;		
+	width: 660rpx;
+	height: 260rpx;
 	border-radius: 40rpx;
 	overflow: hidden;
+	background-color: transparent;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
 }
 .swiper-image image {
-	width: 100%;
+	max-width: 100%;
 }
 .uni-bg-red {
 	background-color: red;

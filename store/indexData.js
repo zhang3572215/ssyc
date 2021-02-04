@@ -6,15 +6,15 @@ export default {
 		duration: 500,
 		swiperData:[{
 			id: 0,
-			image: '../../static/image/top-img-june5.jpg',
+			image: "/static/image/index/swiper1.png",
 			url: ''
 		},{
 			id: 1,
-			image: '../../static/image/top-img-june5.jpg',
+			image: '/static/image/index/swiper1.png',
 			url: ''
 		},{
 			id: 2,
-			image: '../../static/image/top-img-june5.jpg',
+			image: '/static/image/index/swiper1.png',
 			url: ''
 		}],
 		menuList:[{
