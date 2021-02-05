@@ -9123,17 +9123,17 @@ var _default = {
 
     menuList: [{
       id: 0,
-      icon: '../../static/image/menu-icon.png',
+      icon: '/static/image/index/quality-service@2x.png',
       text: '质检服务',
       url: '' },
     {
       id: 1,
-      icon: '../../static/image/menu-icon.png',
+      icon: '/static/image/index/trans-mode@2x.png',
       text: '交易模式	',
       url: '' },
     {
       id: 2,
-      icon: '../../static/image/menu-icon.png',
+      icon: '/static/image/index/guide@2x.png',
       text: '入驻指引',
       url: '' }],
 
