@@ -33,27 +33,36 @@ export default {
 			text: '入驻指引',
 			url: ''
 		}],
-		itemInfo:{
-			itemName: '优质供应商',
-			itemUrl: '',
-			itemList: [{
-				id: 0,
-				name: '福茂源',
-				pic: '../../static/image/menu-icon.png'	
-			},{
-				id: 1,
-				name: '福茂源1',
-				pic: '../../static/image/menu-icon.png'	
-			},{
-				id: 2,
-				name: '福茂源2',
-				pic: '../../static/image/menu-icon.png'	
-			},{
-				id: 3,
-				name: '福茂源3',
-				pic: '../../static/image/menu-icon.png'	
-			}]
-		}
+		itemList: [{
+			id: 0,
+			name: '福茂源',
+			pic: '/static/image/index/supplier-logo1.png'	
+		},{
+			id: 1,
+			name: '福茂源1',
+			pic: '/static/image/index/supplier-logo2.png'	
+		},{
+			id: 2,
+			name: '福茂源2',
+			pic: '/static/image/index/supplier-logo1.png'	
+		},{
+			id: 3,
+			name: '福茂源3',
+			pic: '/static/image/index/supplier-logo2.png'	
+		}],
+		purchaseType: [{
+			id: 0,
+			type: '拼单采购'
+		},{
+			id: 1,
+			type: '直接采购'
+		},{
+			id: 2,
+			type: '竞价采购'
+		},{
+			id: 3,
+			type: '委托采购'
+		}]
     },
     mutations: {
       syncBannerInfo (state, list) {

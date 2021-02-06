@@ -264,60 +264,59 @@ var render = function() {
               )
             ],
             1
-          ),
-          _c(
-            "v-uni-swiper",
-            {
-              staticClass: _vm._$g(5, "sc"),
-              attrs: {
-                circular: true,
-                "indicator-dots": _vm._$g(5, "a-indicator-dots"),
-                autoplay: false,
-                interval: _vm._$g(5, "a-interval"),
-                "previous-margin": "60rpx",
-                "next-margin": "60rpx",
-                _i: 5
-              }
-            },
-            _vm._l(_vm._$g(6, "f"), function(item, index, $20, $30) {
-              return _c(
-                "v-uni-swiper-item",
-                { key: item, attrs: { _i: "6-" + $30 } },
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-swiper",
+        {
+          staticClass: _vm._$g(5, "sc"),
+          attrs: {
+            circular: true,
+            "indicator-dots": _vm._$g(5, "a-indicator-dots"),
+            autoplay: true,
+            interval: _vm._$g(5, "a-interval"),
+            "next-margin": "60rpx",
+            _i: 5
+          }
+        },
+        _vm._l(_vm._$g(6, "f"), function(item, index, $20, $30) {
+          return _c(
+            "v-uni-swiper-item",
+            { key: item, attrs: { _i: "6-" + $30 } },
+            [
+              _c(
+                "v-uni-view",
+                {
+                  staticClass: _vm._$g("7-" + $30, "sc"),
+                  attrs: { _i: "7-" + $30 }
+                },
                 [
                   _c(
                     "v-uni-view",
                     {
-                      staticClass: _vm._$g("7-" + $30, "sc"),
-                      attrs: { _i: "7-" + $30 }
+                      staticClass: _vm._$g("8-" + $30, "sc"),
+                      attrs: { _i: "8-" + $30 }
                     },
                     [
-                      _c(
-                        "v-uni-view",
-                        {
-                          staticClass: _vm._$g("8-" + $30, "sc"),
-                          attrs: { _i: "8-" + $30 }
-                        },
-                        [
-                          _c("v-uni-image", {
-                            attrs: {
-                              src: _vm._$g("9-" + $30, "a-src"),
-                              mode: "aspectFill",
-                              _i: "9-" + $30
-                            }
-                          })
-                        ],
-                        1
-                      )
+                      _c("v-uni-image", {
+                        attrs: {
+                          src: _vm._$g("9-" + $30, "a-src"),
+                          mode: "aspectFill",
+                          _i: "9-" + $30
+                        }
+                      })
                     ],
                     1
                   )
                 ],
                 1
               )
-            }),
+            ],
             1
           )
-        ],
+        }),
         1
       ),
       _c(
@@ -366,53 +365,41 @@ var render = function() {
             "v-uni-view",
             { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
             [
+              _c("v-uni-text", { attrs: { _i: 17 } }, [_vm._v("优质供应商")]),
               _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
-                [
-                  _c("v-uni-text", { attrs: { _i: 18 } }, [
-                    _vm._v(_vm._$g(18, "t0-0"))
-                  ]),
-                  _c(
-                    "v-uni-navigator",
-                    {
-                      attrs: {
-                        url: "",
-                        "hover-class": "navigator-hover",
-                        _i: 19
-                      }
-                    },
-                    [_vm._v("更多 >")]
-                  )
-                ],
-                1
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
-                _vm._l(_vm._$g(21, "f"), function(item, $12, $22, $32) {
-                  return _c(
-                    "v-uni-view",
-                    {
-                      key: item,
-                      staticClass: _vm._$g("21-" + $32, "sc"),
-                      attrs: { _i: "21-" + $32 }
-                    },
-                    [
-                      _c("v-uni-image", {
-                        attrs: {
-                          src: _vm._$g("22-" + $32, "a-src"),
-                          mode: "aspectFill",
-                          _i: "22-" + $32
-                        }
-                      })
-                    ],
-                    1
-                  )
-                }),
-                1
+                "v-uni-navigator",
+                {
+                  staticClass: _vm._$g(18, "sc"),
+                  attrs: { url: "", "hover-class": "navigator-hover", _i: 18 }
+                },
+                [_vm._v("更多")]
               )
             ],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
+            _vm._l(_vm._$g(20, "f"), function(item, $12, $22, $32) {
+              return _c(
+                "v-uni-view",
+                {
+                  key: item,
+                  staticClass: _vm._$g("20-" + $32, "sc"),
+                  attrs: { _i: "20-" + $32 }
+                },
+                [
+                  _c("v-uni-image", {
+                    attrs: {
+                      src: _vm._$g("21-" + $32, "a-src"),
+                      mode: "aspectFill",
+                      _i: "21-" + $32
+                    }
+                  })
+                ],
+                1
+              )
+            }),
             1
           )
         ],
@@ -510,7 +497,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../package/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.container {\n\tpadding: 0;\n\tfont-size: 14px;\n\tline-height: 24px;\n\tbackground-color: #F4F5F6;\n}\n.index-top {\n\tpadding: 20px 0 0;\n\tbackground-color: #fff;\n}\n.search-bar {\n\twidth: 100%;\n\tpadding: 0 30rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-search-input {\n\t-webkit-box-flex: 1;\n\t-webkit-flex: auto;\n\t        flex: auto;\n\theight: 80rpx;\n\tmargin-right: 36rpx;\n\tfont-size: 28rpx;\n\tcolor: #333;\n\tline-height: 80rpx;\n\tpadding: 0 40rpx;\n\tborder-radius: 40rpx;\n\tborder: 1rpx solid #dcdfe6;\n\tbox-sizing: border-box;\n}\n.btn {\n\tborder: none;\n\tpadding: 24rpx;\n\tcolor: #fff;\n\tfont-size: 28rpx;\n\tline-height: 1em;\n\tbackground-color: #d3d4d6;\n}\n.btn-primary {\n\tcolor: #fff;\n\tbackground-color: #409eff;\n\tborder-color: #409eff;\n}\n.index-search-btn {\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\tpadding: 24rpx 64rpx;\n\tborder-radius: 38rpx;\n}\n.swiper {\n\twidth: 100%;\n\theight: 260rpx;\n\tmargin-top: 24rpx;\n}\nuni-swiper-item {\n\theight: 260rpx;\n\tmargin: 0 auto;\n\tpadding: 0;\n\ttext-align: center;\n\tbackground-color: transparent;\n}\n.swiper-item {\n\theight: 260rpx;\n\tpadding: 0 30rpx;\n}\n.swiper-image {\n\twidth: 100%;\n\theight: 260rpx;\t\t\n\tborder-radius: 40rpx;\n\toverflow: hidden;\n}\n.swiper-image uni-image {\n\twidth: 100%;\n}\n.uni-bg-red {\n\tbackground-color: red;\n}\n.uni-bg-green {\n\tbackground-color: green;\n}\n.index-menubar {\n\tmargin-bottom: 10rpx;\n\tpadding: 48rpx 30rpx 28rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\tbackground-color: #fff;\n}\n.menu-item {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.menu-icon {\n\twidth: 100rpx;\n\theight: 100rpx;\n\tmargin-bottom: 30rpx;\n\tline-height: 100rpx;\n\tborder-radius: 24rpx;\n\ttext-align: center;\n\toverflow: hidden;\n}\n.menu-icon uni-image {\n\twidth: 100%;\n\theight: 100%;\n}\n.menu-item uni-text{\n\tline-height: 1em;\n}\n.index-supplier-group {\n\twidth: 100%;\n\tpadding: 0 30rpx;\n\tbackground-color: #fff;\n}\n.index-supplier-title {\n\twidth: 100%;\n\tpadding: 30rpx 0;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-supplier-title uni-text {\n\tfont-size: 1.125em;\n\tline-height: 1em;\n\tcolor: #333;\n\tfont-weight: 700;\n}\n.index-supplier-title uni-navigator {\n\tfont-size: 0.875em;\n\tline-height: 1em;\n\tcolor: #999;\n}\n.index-supplier-list {\n\tpadding-bottom: 30rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: start;\n\t-webkit-justify-content: flex-start;\n\t        justify-content: flex-start;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-supplier-item {\n\twidth: 160rpx;\n\theight: 160rpx;\n\tborder: 1px solid #E0E0E0;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n\tpadding: 0;\n\tfont-size: 14px;\n\tline-height: 24px;\n\tbackground-color: #F4F5F6;\n}\n.index-top {\n\tpadding: 15rpx 30rpx;\n\tbackground-color: #fff;\n}\n.search-bar {\n\twidth: 100%;\n\tpadding: 0;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-search-input {\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1 none;\n\t        flex: 1 none;\n\twidth: 510rpx;\n\theight: 60rpx;\n\tfont-size: 28rpx;\n\tcolor: #333;\n\tline-height: 60rpx;\n\tpadding: 0 30rpx;\n\tborder-radius: 30rpx;\n\tborder: 1rpx solid #dcdfe6;\n\tbox-sizing: border-box;\n}\n.btn {\n\tborder: none;\n\tcolor: #fff;\n\tfont-size: 28rpx;\n\tline-height: 60rpx;\n\ttext-align: center;\n\tbackground-color: #d3d4d6;\n}\n.btn-primary {\n\tcolor: #fff;\n\tbackground-color: #09A4FF;\n\tborder-color: #09A4FF;\n}\n.index-search-btn {\n\twidth: 150rpx;\n\theight: 60rpx;\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1 0 none;\n\t        flex: 1 0 none;\n\tborder-radius: 38rpx;\n}\n.swiper {\n\twidth: 100%;\n\theight: 260rpx;\n\tpadding: 10rpx 30rpx;\n\tbackground-color: #fff;\n}\nuni-swiper-item {\n\theight: 260rpx;\n\tmargin: 0 auto;\n\tpadding: 0;\n\ttext-align: center;\n}\n.swiper-item {\n\twidth: 100%;\n\theight: 260rpx;\n\tpadding: 0;\n\toverflow: hidden;\n}\n.swiper-image {\n\twidth: 660rpx;\t\t\n\tborder-radius: 40rpx;\n\toverflow: hidden;\n\tbackground-color: transparent;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.swiper-image uni-image {\n\twidth: 660rpx;\t\n\theight: 260rpx;\n}\n.uni-bg-red {\n\tbackground-color: red;\n}\n.uni-bg-green {\n\tbackground-color: green;\n}\n.index-menubar {\n\tmargin-bottom: 10rpx;\n\tpadding: 48rpx 30rpx 28rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\tbackground-color: #fff;\n}\n.menu-item {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.menu-icon {\n\twidth: 100rpx;\n\theight: 100rpx;\n\tmargin-bottom: 30rpx;\n\tborder-radius: 30rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\toverflow: hidden;\n}\n.menu-item:nth-child(1) .menu-icon {\n\tbackground: -webkit-linear-gradient(45deg, #5BDAC7 0%, #A3FFDF 100%);\n\tbackground: linear-gradient(45deg, #5BDAC7 0%, #A3FFDF 100%);\n}\n.menu-item:nth-child(2) .menu-icon {\n\tbackground: -webkit-linear-gradient(45deg, #8C8FF2 0%, #B0C4FF 100%);\n\tbackground: linear-gradient(45deg, #8C8FF2 0%, #B0C4FF 100%);\n}\n.menu-item:nth-child(3) .menu-icon {\n\tbackground: -webkit-linear-gradient(45deg, #68BAF9 0%, #81E2FE 100%);\n\tbackground: linear-gradient(45deg, #68BAF9 0%, #81E2FE 100%);\n}\n.menu-icon uni-image {\n\tmax-width: 60rpx;\n\tmax-height: 60rpx;\n}\n.menu-item uni-text{\n\tline-height: 1em;\n}\n.index-supplier-group {\n\twidth: 100%;\n\tmargin-bottom: 10rpx;\n\tpadding: 0 30rpx;\n\tbackground-color: #fff;\n}\n.index-supplier-title {\n\twidth: 100%;\n\tpadding: 30rpx 0;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-supplier-title uni-text {\n\tfont-size: 1.125em;\n\tline-height: 1em;\n\tcolor: #333;\n\tfont-weight: 700;\n}\n.index-supplier-title uni-navigator {\n\tfont-size: 0.875em;\n\tline-height: 1em;\n\tcolor: #999;\n}\n.index-supplier-list {\n\tpadding-bottom: 30rpx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-pack: start;\n\t-webkit-justify-content: flex-start;\n\t        justify-content: flex-start;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n}\n.index-supplier-item {\n\twidth: 160rpx;\n\theight: 160rpx;\n\tborder: 1px solid #E0E0E0;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
