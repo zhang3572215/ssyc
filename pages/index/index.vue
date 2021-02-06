@@ -1,10 +1,11 @@
 <template>
 	<view class="container">		
 		<view class="index-top">
-			<view class="search-bar">
+			<!-- <view class="search-bar">
 				<input type="text" v-model="searchData" class="index-search-input" placeholder="输入关键词" confirm-type="search">
 				<view v-bind:class="['btn index-search-btn', searchData!=''?'btn-primary':'']" @click="toSearchResult">搜索</view>
-			</view>
+			</view> -->
+			<uni-search-bar radius="100" placeholder="输入搜索关键字" @confirm="toSearchResult" cancelButton="none" @blur="toSearchResult"/>
 		</view>
 		<swiper class="swiper" 
 			circular
@@ -48,15 +49,38 @@
 				:class="{'product-control-item': true, 'product-item-active': item.id == productAcitveId}" 
 				@click="productAcitveId = item.id">{{item.type}}</view>
 			</view>
-			<swiper class="swiper"
+			<swiper class="pro-swiper"
+				:style="{height:computeHeigh}"
 				:circular="false"
 				:indicator-dots="false"
 				:autoplay="false"
 				:current="productAcitveId"
-				:duration="500">
+				:duration="500"
+				@change="proSwiperChang">
 				<swiper-item>
-					<view class="product-list">
-						1
+					<view class="product-item" v-for="item in productList" :key="item.pid">
+						<view class="pro-item-info">
+							<view class="pro-item-pic">
+								<image :src="item.pic" mode="aspectFill"></image>
+							</view>
+							<view class="pro-item-text">
+								<view class="pro-text-row">
+									<view class="pro-row-title">{{item.name}}</view>										
+								</view>
+								<view class="pro-text-row">
+									<view class="attrs">供应商：{{item.supplier}}</view>
+									<view class="attrs">发起采购商：{{item.sponsor}}</view>
+								</view>
+								<view class="pro-text-row">
+									<view class="pro-text-score">{{item.score | indexScoreFillter}}</view>
+									<view class="pro-score-icon" v-for="pitem in 5" :key="pitem">
+										<image :src="pitem<item.score?startLight:startGray" mode="aspectFit"></image>
+									</view>
+								</view>
+								<view class="pro-item-link">详情</view>
+							</view>
+						</view>
+						<view class="pro-item-last">{{item.lastTime}}</view>
 					</view>
 				</swiper-item>
 				<swiper-item>
@@ -90,20 +114,40 @@
 			}
 		},
 		computed: {
+			...mapState([
+				'startLight',
+				'startGray'
+			]),
 			...mapState('indexData',[
 				'interval',
 				'swiperData',
 				'menuList',
 				'itemList',
-				'purchaseType'
-			])
+				'purchaseType',
+				'productList'
+			]),
+			computeHeigh:function(){
+				return this.productList.length > 0?260*this.productList.length+'rpx':0
+			}
+		},
+		filters:{
+			indexScoreFillter:function(num){
+				if (num > 0) {
+					return num.toFixed(1)
+				}
+			}
 		},
 		mounted() {
 			this.asyncBannerInfo()
 		},
 		methods: {
 			toSearchResult(){
-				
+				uni.navigateTo({
+					url: 'search/search'
+				})
+			},
+			proSwiperChang(e){
+				this.productAcitveId = e.detail.current
 			},
 			...mapActions('indexData',[
 				"asyncBannerInfo"
@@ -322,5 +366,119 @@
 	}
 	.product-item-active {
 		color: #007FC9;
+	}
+	.pro-swiper {
+		max-width: 750rpx;
+		min-height: 260rpx;
+	}
+	.product-list {
+		padding: 0;
+	}
+	.product-item {
+		padding: 30rpx;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		border-bottom: 1rpx solid #ddd;
+	}
+	.pro-item-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+	}
+	.pro-item-pic {
+		flex: none;
+		width: 140rpx;
+		height: 140rpx;
+		margin-right: 32rpx;
+		overflow: hidden;
+	}
+	.pro-item-pic image {
+		max-width: 140rpx;
+		max-height: 140rpx;
+	}
+	.pro-item-text {
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		position: relative;
+	}
+	.pro-text-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.pro-text-row + .pro-text-row  {
+		margin-top: 20rpx;
+	}
+	.pro-row-title {		
+		max-width: 500rpx;
+		font-size: 28rpx;
+		font-weight: 400;
+		color: #333333;
+		line-height: 28rpx;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-wrap: break-word;
+	}
+	.pro-text-row .attrs {
+		font-size: 24rpx;
+		font-weight: 400;
+		color: #999999;
+		line-height: 24rpx;
+	}
+	.pro-text-row .attrs + .attrs {
+		margin-left: 32rpx;
+	}
+	.pro-text-score {
+		margin-right: 20rpx;
+		font-size: 28rpx;
+		font-weight: 400;
+		color: #333333;
+		line-height: 28rpx;
+	}
+	.pro-item-link {
+		font-size: 24rpx;
+		font-weight: 400;
+		color: #09A4FF;
+		line-height: 24rpx;
+		bottom: 30rpx;
+		right: 0;
+		position: absolute;
+	}
+	.pro-text-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.pro-score-icon {
+		width: 28rpx;
+		height: 28rpx;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.pro-score-icon + .pro-score-icon {
+		margin-left: 16rpx;
+	}
+	.pro-score-icon image {
+		width: 28rpx;
+		height: 28rpx;
+	}
+	.pro-item-last {
+		margin-top: 32rpx;
+		font-size: 28rpx;
+		font-weight: 400;
+		color: #FFA412;
+		text-align: left;
+		line-height: 28rpx;
 	}
 </style>

@@ -106,10 +106,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniSearchBar: function() {
+      return __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 43))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.productList, function(item, __i3__) {
+    var $orig = _vm.__get_orig(item)
+
+    var f0 = _vm._f("indexScoreFillter")(item.score)
+
+    return {
+      $orig: $orig,
+      f0: f0
+    }
+  })
+
   if (!_vm._isMounted) {
     _vm.e0 = function($event, item) {
       var _temp = arguments[arguments.length - 1].currentTarget.dataset,
@@ -121,6 +155,15 @@ var render = function() {
       _vm.productAcitveId = item.id
     }
   }
+
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -152,7 +195,31 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -243,24 +310,45 @@ var app = getApp();var _default =
       productAcitveId: 0 };
 
   },
-  computed: _objectSpread({},
+  computed: _objectSpread(_objectSpread(_objectSpread({},
+  (0, _vuex.mapState)([
+  'startLight',
+  'startGray'])),
+
   (0, _vuex.mapState)('indexData', [
   'interval',
   'swiperData',
   'menuList',
   'itemList',
-  'purchaseType'])),
+  'purchaseType',
+  'productList'])), {}, {
 
+    computeHeigh: function computeHeigh() {
+      return this.productList.length > 0 ? 260 * this.productList.length + 'rpx' : 0;
+    } }),
+
+  filters: {
+    indexScoreFillter: function indexScoreFillter(num) {
+      if (num > 0) {
+        return num.toFixed(1);
+      }
+    } },
 
   mounted: function mounted() {
     this.asyncBannerInfo();
   },
   methods: _objectSpread({
     toSearchResult: function toSearchResult() {
+      uni.navigateTo({
+        url: 'search/search' });
 
+    },
+    proSwiperChang: function proSwiperChang(e) {
+      this.productAcitveId = e.detail.current;
     } },
   (0, _vuex.mapActions)('indexData', [
   "asyncBannerInfo"])) };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 23 */

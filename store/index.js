@@ -9,7 +9,8 @@ Vue.use(Vuex);//vue的插件机制
 //Vuex.Store 构造器选项
 const store = new Vuex.Store({
     state:{//存放状态,这里相当于跟状态树
-        
+        startLight: '/static/image/icons/start-fill.png',
+		startGray: '/static/image/icons/start-empty.png'
     },
 	//计算属性
 	getters:{},
