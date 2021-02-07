@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/index/search/search",
     "pages/hall/hall",
-    "pages/personal/center"
+    "pages/personal/center",
+    "pages/index/quality-test/quality-test"
   ],
   "subPackages": [],
   "window": {
