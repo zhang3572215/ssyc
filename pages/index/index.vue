@@ -23,7 +23,7 @@
 			</swiper-item>
 		</swiper>
 		<view class="index-menubar">
-			<view class="menu-item" v-for="item in menuList" :key="item.id">
+			<view class="menu-item" v-for="item in menuList" :key="item.id" @click="navaByUrl(item.url)">
 				<view class="menu-icon">
 					<image :src="item.icon" mode="aspectFill"></image>
 				</view>
@@ -33,10 +33,10 @@
 		<view class="index-supplier-group">
 			<view class="index-supplier-title">
 				<text>优质供应商</text>
-				<navigator url="" hover-class="navigator-hover">更多</navigator>
+				<navigator url="/pages/index/supplier-list/supplier-list" hover-class="navigator-hover">更多</navigator>
 			</view>
 			<view class="index-supplier-list">
-				<view class="index-supplier-item" v-for="item in itemList" :key="item.id">
+				<view class="index-supplier-item" v-for="item in itemList" :key="item.id" >
 					<image :src="item.pic" mode="aspectFill"></image>
 				</view>
 			</view>
@@ -74,7 +74,7 @@
 								<view class="pro-text-row">
 									<view class="pro-text-score">{{item.score | indexScoreFillter}}</view>
 									<view class="pro-score-icon" v-for="pitem in 5" :key="pitem">
-										<image :src="pitem<item.score?startLight:startGray" mode="aspectFit"></image>
+										<image :src="pitem < item.score?startLight:startGray" mode="aspectFit"></image>
 									</view>
 								</view>
 								<view class="pro-item-link">详情</view>
@@ -149,6 +149,12 @@
 			proSwiperChang(e){
 				this.productAcitveId = e.detail.current
 			},
+			navaByUrl(url) {
+				console.log('跳转')
+				uni.navigateTo({
+					url:url,
+				})
+			},			
 			...mapActions('indexData',[
 				"asyncBannerInfo"
 			])

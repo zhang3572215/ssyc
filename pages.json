@@ -25,11 +25,38 @@
 			"navigationBarTitleText": "质检服务",
 			"enablePullDownRefresh": false
 		}
-    }],
+    }    ,{
+            "path" : "pages/index/supplier/supplier",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "优质供应商",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/supplier-list/supplier-list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "供应商列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/transaction-mode/transaction-mode",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "交易模式",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
 			"background": "#efeff4"
@@ -40,7 +67,7 @@
 		"selectedColor": "#007AFF",
 		"borderStyle": "black",
 		"backgroundColor": "#F8F8F8",
-		"fontSize": "22px",
+		"fontSize": "14px",
 		"iconWidth": "18px",
 		"height": "50px",
 		"spacing": "6px",

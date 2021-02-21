@@ -6,27 +6,27 @@ export default {
 		duration: 500,
 		swiperData:[{
 			id: 0,
-			image: "/static/image/index/swiper1.png",
+			image: "/static/image/index/dynamic/swiper1.png",
 			url: ''
 		},{
 			id: 1,
-			image: '/static/image/index/swiper1.png',
+			image: '/static/image/index/dynamic/swiper1.png',
 			url: ''
 		},{
 			id: 2,
-			image: '/static/image/index/swiper1.png',
+			image: '/static/image/index/dynamic/swiper1.png',
 			url: ''
 		}],
 		menuList:[{
 			id: 0,
 			icon: '/static/image/index/quality-service@2x.png',
 			text: '质检服务',
-			url: ''
+			url: '/pages/index/quality-test/quality-test'
 		},{
 			id: 1,
 			icon: '/static/image/index/trans-mode@2x.png',
 			text: '交易模式	',
-			url: ''
+			url: '/pages/index/transaction-mode/transaction-mode'
 		},{
 			id: 2,
 			icon: '/static/image/index/guide@2x.png',
@@ -36,23 +36,24 @@ export default {
 		itemList: [{
 			id: 0,
 			name: '福茂源',
-			pic: '/static/image/index/supplier-logo1.png'	
+			pic: '/static/image/index/dynamic/supplier-logo1.png'
 		},{
 			id: 1,
 			name: '福茂源1',
-			pic: '/static/image/index/supplier-logo2.png'	
+			pic: '/static/image/index/dynamic/supplier-logo2.png'
 		},{
 			id: 2,
 			name: '福茂源2',
-			pic: '/static/image/index/supplier-logo1.png'	
+			pic: '/static/image/index/dynamic/supplier-logo1.png'
 		},{
 			id: 3,
 			name: '福茂源3',
-			pic: '/static/image/index/supplier-logo2.png'	
+			pic: '/static/image/index/dynamic/supplier-logo2.png'
 		}],
 		purchaseType: [{
 			id: 0,
-			type: '拼单采购'
+			type: '拼单采购',
+			pic: '/static/image/index/trans-mode-pic1.png'
 		},{
 			id: 1,
 			type: '直接采购'
@@ -65,7 +66,7 @@ export default {
 		}],
 		productList:[{
 			pid: 0,
-			pic: '/static/image/index/product-pic.png',
+			pic: '/static/image/index/dynamic/product-pic.png',
 			name: '优质白砂糖 标题最多显示30个字',
 			supplier: '中粮',
 			sponsor: '达利园',
@@ -73,7 +74,7 @@ export default {
 			lastTime: '5天15小时20分钟'
 		},{
 			pid: 1,
-			pic: '/static/image/index/product-pic.png',
+			pic: '/static/image/index/dynamic/product-pic.png',
 			name: '优质白砂糖 标题最多显示30个字标题最多显示30个字标题最多显示30个字',
 			supplier: '中粮',
 			sponsor: '达利园',
@@ -81,7 +82,7 @@ export default {
 			lastTime: '5天15小时20分钟'
 		},{
 			pid: 2,
-			pic: '/static/image/index/product-pic.png',
+			pic: '/static/image/index/dynamic/product-pic.png',
 			name: '优质白砂糖 标题最多显示30个字',
 			supplier: '中粮',
 			sponsor: '达利园',

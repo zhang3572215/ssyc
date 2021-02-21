@@ -4,13 +4,16 @@
     "pages/index/search/search",
     "pages/hall/hall",
     "pages/personal/center",
-    "pages/index/quality-test/quality-test"
+    "pages/index/quality-test/quality-test",
+    "pages/index/supplier/supplier",
+    "pages/index/supplier-list/supplier-list",
+    "pages/index/transaction-mode/transaction-mode"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
@@ -18,7 +21,7 @@
     "selectedColor": "#007AFF",
     "borderStyle": "black",
     "backgroundColor": "#F8F8F8",
-    "fontSize": "22px",
+    "fontSize": "14px",
     "iconWidth": "18px",
     "height": "50px",
     "spacing": "6px",

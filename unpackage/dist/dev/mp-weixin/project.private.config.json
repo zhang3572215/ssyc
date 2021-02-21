@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -12,8 +13,15 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/index/search/search",
-          "pathName": "pages/index/search/search",
+          "name": "pages/index/supplier-list/supplier-list",
+          "pathName": "pages/index/supplier-list/supplier-list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/transaction-mode/transaction-mode",
+          "pathName": "pages/index/transaction-mode/transaction-mode",
+          "query": "",
           "scene": null
         }
       ]

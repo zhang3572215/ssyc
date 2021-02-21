@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.createSubpackageApp = createSubpackageApp;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -241,7 +241,7 @@ var promiseInterceptor = {
 
 
 var SYNC_API_RE =
-/^\$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
+/^\$|Window$|WindowStyle$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
 
 var CONTEXT_API_RE = /^create|Manager$/;
 
@@ -432,7 +432,19 @@ var previewImage = {
   } };
 
 
-// import navigateTo from 'uni-helpers/navigate-to'
+var UUID_KEY = '__DC_STAT_UUID';
+var deviceId;
+function addUuid(result) {
+  deviceId = deviceId || wx.getStorageSync(UUID_KEY);
+  if (!deviceId) {
+    deviceId = Date.now() + '' + Math.floor(Math.random() * 1e7);
+    wx.setStorage({
+      key: UUID_KEY,
+      data: deviceId });
+
+  }
+  result.deviceId = deviceId;
+}
 
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
@@ -445,16 +457,22 @@ function addSafeAreaInsets(result) {
 
   }
 }
+
+var getSystemInfo = {
+  returnValue: function returnValue(result) {
+    addUuid(result);
+    addSafeAreaInsets(result);
+  } };
+
+
+// import navigateTo from 'uni-helpers/navigate-to'
+
 var protocols = {
   redirectTo: redirectTo,
   // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
-  getSystemInfo: {
-    returnValue: addSafeAreaInsets },
-
-  getSystemInfoSync: {
-    returnValue: addSafeAreaInsets } };
-
+  getSystemInfo: getSystemInfo,
+  getSystemInfoSync: getSystemInfo };
 
 var todos = [
 'vibrate',
@@ -686,16 +704,19 @@ function initHook(name, options) {
     };
   }
 }
+if (!MPPage.__$wrappered) {
+  MPPage.__$wrappered = true;
+  Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('onLoad', options);
+    return MPPage(options);
+  };
+  Page.after = MPPage.after;
 
-Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('onLoad', options);
-  return MPPage(options);
-};
-
-Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('created', options);
-  return MPComponent(options);
-};
+  Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('created', options);
+    return MPComponent(options);
+  };
+}
 
 var PAGE_EVENT_HOOKS = [
 'onPullDownRefresh',
@@ -1214,9 +1235,13 @@ function handleEvent(event) {var _this = this;
           isCustom,
           methodName);
 
+          params = Array.isArray(params) ? params : [];
           // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
-          // eslint-disable-next-line no-sparse-arrays
-          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
+          if (/=\s*\S+\.eventParams\s*\|\|\s*\S+\[['"]event-params['"]\]/.test(handler.toString())) {
+            // eslint-disable-next-line no-sparse-arrays
+            params = params.concat([,,,,,,,,,, event]);
+          }
+          ret.push(handler.apply(handlerCtx, params));
         }
       });
     }
@@ -1231,6 +1256,19 @@ function handleEvent(event) {var _this = this;
   }
 }
 
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 var hooks = [
 'onShow',
 'onHide',
@@ -1240,10 +1278,28 @@ var hooks = [
 'onUnhandledRejection'];
 
 
+function initEventChannel() {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
+    }
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
+}
+
 function parseBaseApp(vm, _ref3)
 
 
 {var mocks = _ref3.mocks,initRefs = _ref3.initRefs;
+  initEventChannel();
   if (vm.$options.store) {
     _vue.default.prototype.$store = vm.$options.store;
   }
@@ -1412,34 +1468,7 @@ function parseApp(vm) {
 
 }
 
-var eventChannels = {};
-
-var eventChannelStack = [];
-
-function getEventChannel(id) {
-  if (id) {
-    var eventChannel = eventChannels[id];
-    delete eventChannels[id];
-    return eventChannel;
-  }
-  return eventChannelStack.shift();
-}
-
 function createApp(vm) {
-  _vue.default.prototype.getOpenerEventChannel = function () {
-    // 微信小程序使用自身getOpenerEventChannel
-    {
-      return this.$scope.getOpenerEventChannel();
-    }
-  };
-  var callHook = _vue.default.prototype.__call_hook;
-  _vue.default.prototype.__call_hook = function (hook, args) {
-    if (hook === 'onLoad' && args && args.__id__) {
-      this.__eventChannel__ = getEventChannel(args.__id__);
-      delete args.__id__;
-    }
-    return callHook.call(this, hook, args);
-  };
   App(parseApp(vm));
   return vm;
 }
@@ -1642,6 +1671,41 @@ function createComponent(vueOptions) {
   }
 }
 
+function createSubpackageApp(vm) {
+  var appOptions = parseApp(vm);
+  var app = getApp({
+    allowDefault: true });
+
+  var globalData = app.globalData;
+  if (globalData) {
+    Object.keys(appOptions.globalData).forEach(function (name) {
+      if (!hasOwn(globalData, name)) {
+        globalData[name] = appOptions.globalData[name];
+      }
+    });
+  }
+  Object.keys(appOptions).forEach(function (name) {
+    if (!hasOwn(app, name)) {
+      app[name] = appOptions[name];
+    }
+  });
+  if (isFn(appOptions.onShow) && wx.onAppShow) {
+    wx.onAppShow(function () {for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      appOptions.onShow.apply(app, args);
+    });
+  }
+  if (isFn(appOptions.onHide) && wx.onAppHide) {
+    wx.onAppHide(function () {for (var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {args[_key6] = arguments[_key6];}
+      appOptions.onHide.apply(app, args);
+    });
+  }
+  if (isFn(appOptions.onLaunch)) {
+    var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
+    appOptions.onLaunch.call(app, args);
+  }
+  return vm;
+}
+
 todos.forEach(function (todoApi) {
   protocols[todoApi] = false;
 });
@@ -1721,6 +1785,7 @@ if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
 wx.createApp = createApp;
 wx.createPage = createPage;
 wx.createComponent = createComponent;
+wx.createSubpackageApp = createSubpackageApp;
 
 var uni$1 = uni;var _default =
 
@@ -1869,7 +1934,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 12));
 
 
-var _indexData = _interopRequireDefault(__webpack_require__(/*! ./indexData.js */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // import { getRecorderBy } from '@/utils/ApiList'			//一般情况下请求的页面初始化数据放到
+var _indexData = _interopRequireDefault(__webpack_require__(/*! ./indexData.js */ 13));
+var _qualityData = _interopRequireDefault(__webpack_require__(/*! ./qualityData.js */ 17));
+var _supplierData = _interopRequireDefault(__webpack_require__(/*! ./supplierData.js */ 18));
+var _transModeData = _interopRequireDefault(__webpack_require__(/*! ./transModeData.js */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // import { getRecorderBy } from '@/utils/ApiList'			//一般情况下请求的页面初始化数据放到
 
 _vue.default.use(_vuex.default); //vue的插件机制
 
@@ -1887,7 +1955,10 @@ var store = new _vuex.default.Store({
   actions: {},
   //模块	
   modules: {
-    indexData: _indexData.default } });var _default =
+    indexData: _indexData.default,
+    qualityData: _qualityData.default,
+    supplierData: _supplierData.default,
+    transModeData: _transModeData.default } });var _default =
 
 
 
@@ -3024,27 +3095,27 @@ var _default = {
     duration: 500,
     swiperData: [{
       id: 0,
-      image: "/static/image/index/swiper1.png",
+      image: "/static/image/index/dynamic/swiper1.png",
       url: '' },
     {
       id: 1,
-      image: '/static/image/index/swiper1.png',
+      image: '/static/image/index/dynamic/swiper1.png',
       url: '' },
     {
       id: 2,
-      image: '/static/image/index/swiper1.png',
+      image: '/static/image/index/dynamic/swiper1.png',
       url: '' }],
 
     menuList: [{
       id: 0,
       icon: '/static/image/index/quality-service@2x.png',
       text: '质检服务',
-      url: '' },
+      url: '/pages/index/quality-test/quality-test' },
     {
       id: 1,
       icon: '/static/image/index/trans-mode@2x.png',
       text: '交易模式	',
-      url: '' },
+      url: '/pages/index/transaction-mode/transaction-mode' },
     {
       id: 2,
       icon: '/static/image/index/guide@2x.png',
@@ -3054,23 +3125,24 @@ var _default = {
     itemList: [{
       id: 0,
       name: '福茂源',
-      pic: '/static/image/index/supplier-logo1.png' },
+      pic: '/static/image/index/dynamic/supplier-logo1.png' },
     {
       id: 1,
       name: '福茂源1',
-      pic: '/static/image/index/supplier-logo2.png' },
+      pic: '/static/image/index/dynamic/supplier-logo2.png' },
     {
       id: 2,
       name: '福茂源2',
-      pic: '/static/image/index/supplier-logo1.png' },
+      pic: '/static/image/index/dynamic/supplier-logo1.png' },
     {
       id: 3,
       name: '福茂源3',
-      pic: '/static/image/index/supplier-logo2.png' }],
+      pic: '/static/image/index/dynamic/supplier-logo2.png' }],
 
     purchaseType: [{
       id: 0,
-      type: '拼单采购' },
+      type: '拼单采购',
+      pic: '/static/image/index/trans-mode-pic1.png' },
     {
       id: 1,
       type: '直接采购' },
@@ -3083,7 +3155,7 @@ var _default = {
 
     productList: [{
       pid: 0,
-      pic: '/static/image/index/product-pic.png',
+      pic: '/static/image/index/dynamic/product-pic.png',
       name: '优质白砂糖 标题最多显示30个字',
       supplier: '中粮',
       sponsor: '达利园',
@@ -3091,7 +3163,7 @@ var _default = {
       lastTime: '5天15小时20分钟' },
     {
       pid: 1,
-      pic: '/static/image/index/product-pic.png',
+      pic: '/static/image/index/dynamic/product-pic.png',
       name: '优质白砂糖 标题最多显示30个字标题最多显示30个字标题最多显示30个字',
       supplier: '中粮',
       sponsor: '达利园',
@@ -3099,7 +3171,7 @@ var _default = {
       lastTime: '5天15小时20分钟' },
     {
       pid: 2,
-      pic: '/static/image/index/product-pic.png',
+      pic: '/static/image/index/dynamic/product-pic.png',
       name: '优质白砂糖 标题最多显示30个字',
       supplier: '中粮',
       sponsor: '达利园',
@@ -3253,6 +3325,275 @@ baseUrl;exports.default = _default;
 
 /***/ }),
 
+/***/ 17:
+/*!*********************************************!*\
+  !*** D:/work/APP/ssyc/store/qualityData.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _APIList = __webpack_require__(/*! @/utils/API/APIList.js */ 14); //APIlist 按需载入方法
+var _default = {
+  namespaced: true,
+  state: {
+    contentList: [{
+      id: 0,
+      image: "/static/image/icons/dynamic/content-1.png",
+      text: '食品理化检测',
+      url: '' },
+    {
+      id: 1,
+      image: "/static/image/icons/dynamic/content-2.png",
+      text: '食品添加剂检测',
+      url: '' },
+    {
+      id: 2,
+      image: "/static/image/icons/dynamic/content-3.png",
+      text: '一次性卫生用品检测',
+      url: '' },
+    {
+      id: 3,
+      image: "/static/image/icons/dynamic/content-4.png",
+      text: '水质检测',
+      url: '' },
+    {
+      id: 4,
+      image: "/static/image/icons/dynamic/content-5.png",
+      text: '农残检测',
+      url: '' },
+    {
+      id: 5,
+      image: "/static/image/icons/dynamic/content-6.png",
+      text: '微生物检测',
+      url: '' },
+    {
+      id: 6,
+      image: "/static/image/icons/dynamic/content-7.png",
+      text: '茶叶检测',
+      url: '' },
+    {
+      id: 7,
+      image: "/static/image/icons/dynamic/content-8.png",
+      text: '元素检测',
+      url: '' },
+    {
+      id: 8,
+      image: "/static/image/icons/dynamic/content-9.png",
+      text: '饲料检测',
+      url: '' }],
+
+    deviceList: [{
+      id: 0,
+      image: "/static/image/icons/dynamic/device-img-01.png",
+      text: '液相色谱仪',
+      url: '' },
+    {
+      id: 1,
+      image: "/static/image/icons/dynamic/device-img-02.png",
+      text: '石墨炉原子分光光度计',
+      url: '' },
+    {
+      id: 2,
+      image: "/static/image/icons/dynamic/device-img-03.png",
+      text: '液相-原子荧光光谱仪',
+      url: '' },
+    {
+      id: 3,
+      image: "/static/image/icons/dynamic/device-img-04.png",
+      text: '紫外分析仪',
+      url: '' },
+    {
+      id: 4,
+      image: "/static/image/icons/dynamic/device-img-05.png",
+      text: '真空干燥箱',
+      url: '' },
+    {
+      id: 5,
+      image: "/static/image/icons/dynamic/device-img-06.png",
+      text: '电感耦合等离子体质谱仪',
+      url: '' }] },
+
+
+  mutations: {},
+
+
+  actions: {} };exports.default = _default;
+
+/***/ }),
+
+/***/ 18:
+/*!**********************************************!*\
+  !*** D:/work/APP/ssyc/store/supplierData.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _APIList = __webpack_require__(/*! @/utils/API/APIList.js */ 14); //APIlist 按需载入方法
+var _default = {
+  namespaced: true,
+  state: {
+    supplierList: [{
+      pid: 0,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 1 },
+    {
+      pid: 1,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称1',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 1 },
+    {
+      pid: 2,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称2',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 1 },
+    {
+      pid: 3,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称3',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 1 },
+    {
+      pid: 4,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称4',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 1 },
+    {
+      pid: 5,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称5',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 0 },
+    {
+      pid: 6,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称6',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 },
+    {
+      pid: 7,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称7',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 },
+    {
+      pid: 8,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称8',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 },
+    {
+      pid: 9,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称9',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 },
+    {
+      pid: 10,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称10',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 },
+    {
+      pid: 11,
+      pic: '/static/image/index/dynamic/supplier-logo1.png',
+      name: 'xx供应商名称11',
+      institution: '中纺质检',
+      product: '白砂糖',
+      quality: 10 }] },
+
+
+  mutations: {
+    syncListUPdate: function syncListUPdate(state, list) {
+      state.supplierList = state.supplierList.concat(list);
+    } },
+
+  actions: {
+    asyncListUPdate: function asyncListUPdate(_ref, list) {var commit = _ref.commit,state = _ref.state;
+      console.log(list.length);
+      commit('syncListUPdate', list);
+    } } };exports.default = _default;
+
+/***/ }),
+
+/***/ 19:
+/*!***********************************************!*\
+  !*** D:/work/APP/ssyc/store/transModeData.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _APIList = __webpack_require__(/*! @/utils/API/APIList.js */ 14); //APIlist 按需载入方法
+var _default = {
+  namespaced: true,
+  state: {
+    productList: [{
+      pid: 0,
+      pic: '/static/image/index/dynamic/product-pic.png',
+      name: '优质白砂糖 标题最多显示30个字',
+      supplier: '中粮',
+      sponsor: '达利园',
+      score: 5.0,
+      lastTime: '5天15小时20分钟' },
+    {
+      pid: 1,
+      pic: '/static/image/index/dynamic/product-pic.png',
+      name: '优质白砂糖 标题最多显示30个字标题最多显示30个字标题最多显示30个字',
+      supplier: '中粮',
+      sponsor: '达利园',
+      score: 4.0,
+      lastTime: '5天15小时20分钟' },
+    {
+      pid: 2,
+      pic: '/static/image/index/dynamic/product-pic.png',
+      name: '优质白砂糖 标题最多显示30个字',
+      supplier: '中粮',
+      sponsor: '达利园',
+      score: 3.0,
+      lastTime: '5天15小时20分钟' },
+    {
+      pid: 3,
+      pic: '/static/image/index/dynamic/product-pic.png',
+      name: '优质白砂糖 标题最多显示30个字',
+      supplier: '中粮',
+      sponsor: '达利园',
+      score: 3.0,
+      lastTime: '5天15小时20分钟' },
+    {
+      pid: 4,
+      pic: '/static/image/index/dynamic/product-pic.png',
+      name: '优质白砂糖 标题最多显示30个字',
+      supplier: '中粮',
+      sponsor: '达利园',
+      score: 3.0,
+      lastTime: '5天15小时20分钟' }] },
+
+
+  mutations: {},
+
+
+  actions: {} };exports.default = _default;
+
+/***/ }),
+
 /***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
@@ -3264,7 +3605,7 @@ baseUrl;exports.default = _default;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/*!
  * Vue.js v2.6.11
- * (c) 2014-2020 Evan You
+ * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
 /*  */
@@ -5908,7 +6249,7 @@ function renderList (
       var iterator = val[Symbol.iterator]();
       var result = iterator.next();
       while (!result.done) {
-        ret.push(render(result.value, ret.length, i++, i)); // fixed by xxxxxx
+        ret.push(render(result.value, ret.length, i, i++)); // fixed by xxxxxx
         result = iterator.next();
       }
     } else {
@@ -9223,6 +9564,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onError',
     'onUnhandledRejection',
     //Page
+    'onInit',
     'onLoad',
     // 'onShow',
     'onReady',
@@ -9342,7 +9684,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 55:
+/***/ 96:
 /*!******************************************************!*\
   !*** D:/work/APP/ssyc/components/uni-icons/icons.js ***!
   \******************************************************/

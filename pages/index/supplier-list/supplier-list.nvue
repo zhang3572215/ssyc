@@ -1,0 +1,133 @@
+<template>
+	<view class="supplier">
+		<list class="supplier-list" 
+			:show-scrollbar="false"
+			loadmoreoffset="20"
+			offset-accuracy="20"
+			@loadmore="listLoadMore">
+			<cell class="supplier-item" v-for="item in supplierList" :key="item.id">
+				<view class="supplier-item-image">
+					<image :src="item.pic" class="supplier-item-img" mode="center"></image>
+				</view>
+				<view class="supplier-item-attr">
+					<view class="supplier-item-name">{{item.name}}</view>
+					<view class="supplier-item-other">
+						<text class="supplier-attr-text">质检机构：{{item.institution}}</text>
+						<text class="supplier-attr-text">质检产品：{{item.product}}</text>
+					</view>
+				</view>
+				<view class="supplier-item-quality" v-show="item.quality==1">优质</view>
+			</cell>
+		</list>
+	</view>
+</template>
+
+<script>
+	import { mapState, mapActions } from 'vuex';
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		computed: {
+			...mapState('supplierData',[
+				'supplierList'
+			]),
+		},
+		// filters: {
+		// 	qualityFilter: function(quality) {
+		// 		if (!quality && quality!==0) return ''
+		// 		switch (quality){
+		// 			case 1:
+		// 				return '优质'
+		// 				break;
+		// 			case 0:
+		// 				return ''
+		// 				break;
+		// 			default:
+		// 				return '未分级'
+		// 				break;
+		// 		}
+		// 	}
+		// },
+		methods: {
+			listLoadMore(){
+				console.log("加载更多")
+				this.asyncListUPdate(this.supplierList)
+			},
+			...mapActions('supplierData',[
+				'asyncListUPdate'
+			])
+		}
+	}
+</script>
+
+<style>
+	.supplier {
+		width: 750rpx;
+		padding-top: 10rpx;
+		background-color: #F7F7F7;
+	}
+	.supplier-list {
+		padding: 0 30rpx;
+		background-color: #FFFFFF;
+	}
+	.supplier-item {
+		padding: 30rpx 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+		border-bottom: 1px solid #DDDDDD;
+		position: relative;
+	}
+	.supplier-item-image {
+		width: 90rpx;
+		height: 90rpx;
+		flex-basis: auto;
+		margin-right: 20rpx;
+		border: 1px solid #DDDDDD;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	.supplier-item-img {
+		width: 80%;
+		height: 80%;
+	}
+	.supplier-item-attr {
+		/* display: flex; */
+		flex: 1;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: stretch;
+	}
+	.supplier-item-name {
+		font-size: 28rpx;
+		line-height: 28rpx;
+		color: #333333;
+	}
+	.supplier-item-other {
+		width: 100%;
+		/* display: flex; */
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.supplier-attr-text {
+		margin-right: 20rpx;
+		font-size: 24rpx;
+		line-height: 24rpx;
+		color: #999999;
+	}
+	.supplier-item-quality {
+		font-size: 36rpx;
+		color: #ffa412;
+		line-height: 36rpx;
+		position: absolute;
+		top: 30rpx;
+		right: 0;
+	}
+</style>

@@ -3,6 +3,9 @@ import Vuex from 'vuex'
 
 // import { getRecorderBy } from '@/utils/ApiList'			//一般情况下请求的页面初始化数据放到
 import IndexData from './indexData.js'
+import QualityData from './qualityData.js'
+import SupplierData from './supplierData.js'
+import TransModeData from './transModeData.js'
 
 Vue.use(Vuex);//vue的插件机制
 
@@ -21,6 +24,9 @@ const store = new Vuex.Store({
 	//模块	
 	modules:{
 		indexData:IndexData,
+		qualityData:QualityData,
+		supplierData: SupplierData,
+		transModeData: TransModeData
 	}
 })
 
